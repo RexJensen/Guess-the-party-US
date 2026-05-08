@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess the Party — U.S. Congress</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Guess the Party</h1>
+      <p class="subtitle">U.S. Congress Edition</p>
+    </header>
+
+    <section id="game" aria-live="polite">
+      <div id="card">
+        <div class="photo-wrap">
+          <img id="photo" alt="Member of Congress" />
+          <div id="photo-loading" class="photo-loading">Loading…</div>
+        </div>
+
+        <div id="meta" class="meta hidden">
+          <h2 id="name"></h2>
+          <p id="role"></p>
+        </div>
+
+        <div id="choices" class="choices">
+          <button data-party="Democrat" class="party-btn dem" aria-keyshortcuts="D">
+            <span class="key">D</span> Democrat
+          </button>
+          <button data-party="Republican" class="party-btn rep" aria-keyshortcuts="R">
+            <span class="key">R</span> Republican
+          </button>
+          <button data-party="Independent" class="party-btn ind" aria-keyshortcuts="I">
+            <span class="key">I</span> Independent
+          </button>
+        </div>
+
+        <div id="result" class="result hidden">
+          <p id="result-text"></p>
+          <button id="next-btn">Next &rarr; <span class="key small">Space</span></button>
+        </div>
+
+        <div id="status" class="status">Loading legislators…</div>
+      </div>
+
+      <aside id="score" aria-label="Score">
+        <div><span class="label">Correct</span><span id="correct">0</span></div>
+        <div><span class="label">Total</span><span id="total">0</span></div>
+        <div><span class="label">Streak</span><span id="streak">0</span></div>
+        <div><span class="label">Best</span><span id="best">0</span></div>
+        <div><span class="label">Accuracy</span><span id="accuracy">—</span></div>
+      </aside>
+    </section>
+
+    <footer>
+      <p>
+        Legislator data from
+        <a href="https://github.com/unitedstates/congress-legislators" target="_blank" rel="noopener">unitedstates/congress-legislators</a>.
+        Photos from the <a href="https://github.com/unitedstates/images" target="_blank" rel="noopener">unitedstates/images</a> public-domain archive.
+      </p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
