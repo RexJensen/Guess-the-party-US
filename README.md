@@ -2,7 +2,7 @@
 
 A small browser game: you're shown a photo of a random sitting member of the U.S. Congress, and you guess their party (Democrat, Republican, or Independent).
 
-**Play it:** https://rexjensen.github.io/guess-the-party-us/
+**Play it:** https://rexjensen.github.io/Guess-the-party-US/
 
 ## How to play
 
