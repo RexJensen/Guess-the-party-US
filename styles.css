@@ -7,7 +7,6 @@
   --border: #2c3354;
   --dem: #1f6feb;
   --rep: #d9362c;
-  --ind: #8a4fd1;
   --good: #25c281;
   --bad: #ef4655;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
@@ -125,7 +124,7 @@ h1 {
 
 .choices {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 
@@ -160,7 +159,6 @@ h1 {
 
 .party-btn.dem { border-top: 3px solid var(--dem); }
 .party-btn.rep { border-top: 3px solid var(--rep); }
-.party-btn.ind { border-top: 3px solid var(--ind); }
 
 .party-btn.correct {
   background: rgba(37, 194, 129, 0.18);
