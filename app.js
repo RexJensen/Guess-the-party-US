@@ -5,7 +5,7 @@
     (id) => `https://unitedstates.github.io/images/congress/225x275/${id}.jpg`,
     (id) => `https://theunitedstates.io/images/congress/450x550/${id}.jpg`,
   ];
-  const PARTY_KEYS = { d: 'Democrat', r: 'Republican', i: 'Independent' };
+  const PARTY_KEYS = { d: 'Democrat', r: 'Republican' };
   const STORAGE_KEY = 'gtp-us-best-streak';
 
   const $ = (id) => document.getElementById(id);
@@ -23,8 +23,7 @@
 
   function partyDisplay(p) {
     if (p === 'Democrat') return 'a Democrat';
-    if (p === 'Republican') return 'a Republican';
-    return 'an Independent';
+    return 'a Republican';
   }
 
   function setStatus(text) {
@@ -40,8 +39,9 @@
       .map((p) => {
         const term = p.terms[p.terms.length - 1];
         if (!term || !p.id || !p.id.bioguide) return null;
-        const party = term.party;
-        if (!['Democrat', 'Republican', 'Independent'].includes(party)) return null;
+        let party = term.party;
+        if (party === 'Independent') party = 'Democrat';
+        if (!['Democrat', 'Republican'].includes(party)) return null;
         return {
           bioguide: p.id.bioguide,
           full: (p.name && (p.name.official_full || `${p.name.first} ${p.name.last}`)) || p.id.bioguide,
