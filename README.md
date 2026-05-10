@@ -1,5 +1,11 @@
 # Guess the Party — U.S. Congress
 
+<p align="center">
+  <a href="https://rexjensen.github.io/Guess-the-party-US/">
+    <img src="docs/ad.png" alt="Guess the Party — U.S. Congress Edition. Can you tell Democrat from Republican?" width="480">
+  </a>
+</p>
+
 A small browser game: you're shown a photo of a random sitting member of the U.S. Congress, and you guess their party (Democrat or Republican).
 
 **Play it:** https://rexjensen.github.io/Guess-the-party-US/
